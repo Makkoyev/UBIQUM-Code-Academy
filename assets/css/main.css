@@ -1,0 +1,371 @@
+html, body,
+div, section,
+nav, footer,
+p,
+h1, h2, h3, h4, h5, h6,
+ul, li,
+table, thead, tbody, tr, td, th {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-weight: 400;
+}
+
+/* Navigation styling */
+nav {
+  background: var(--blue-grey-900);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav li,
+footer li {
+  list-style: none;
+  padding: 15px;
+}
+
+/* NAV BAR */
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  display: none;
+  min-width: 160px;
+  position: absolute;
+  z-index: 1;
+  animation: slideDown .3s ease-in forwards;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Container styling */
+.hero-image {
+  background-image: url(../img/hero-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 800px;
+  width: 100%;
+}
+
+.hero-image .hero-text {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 35px 15px 35px;
+  position: relative;
+  text-align: center;
+  top: 30vh;
+}
+
+.hero-image div p {
+  background: var(--amber-400);
+  margin: 5px;
+  padding: 15px 35px 15px 35px;
+}
+
+.hero-image h1 {
+  align-self: center;
+  background: var(--amber-400);
+  display: flex;
+  padding: 15px 35px 15px 35px;
+}
+
+.h1-section {
+  background: var(--blue-grey-900);
+  color: var(--amber-400);
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+.h1-section strong {
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+.main-content {
+  background: var(--blue-light-700);
+  color: white;
+  margin: 5px;
+  padding: 15px;
+}
+
+.main-content p {
+  padding: 15px;
+}
+
+.intro {
+  background: var(--blue-light-700);
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  padding: 15px 35px 15px 35px;
+}
+
+.intro h1 {
+  align-self: center;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: 15px 0 0 0;
+  text-align: center;
+  width: 100px;
+}
+
+.intro p {
+  background: var(--amber-400);
+  border-radius: 5px;
+  margin: 15px 0 0 0;
+  padding: 15px;
+  text-align: center;
+}
+
+.filters {
+  background: var(--blue-light-700);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+  padding: 15px;
+}
+
+.filters section {
+  display: flex;
+}
+
+.filters section label {
+  align-items: center;
+  display: flex;
+  font-size: 18px;
+  padding: 6px;
+}
+
+.filters input {
+  display: flex;
+}
+
+.hide-row {
+  display: none;
+}
+
+.show-row {
+  display: block;
+}
+
+/* Footer styling */
+footer {
+  background: var(--blue-grey-900);
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+}
+
+/* NAVBAR MOBILE .mobile ul /.mobile section*/
+
+
+
+.menu-transform {
+  display: flex;
+}
+.menu-transform::before {
+  content: '\f0c9';
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 900;
+  padding-right: 3px;
+}
+.menu-transform:hover .mobile > section {
+  display: block;
+}
+.mobile > section{
+  position: absolute;
+  display: flex;
+  background: var(--blue-grey-900);
+  z-index: 999;
+  display: none;
+
+}
+.mobile section ul {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+
+
+/* TABLE STYLING  _______________________________________ */
+table {
+  border-collapse: collapse;
+  margin: 2em auto;
+  text-align: center;
+  width: 90%;
+}
+
+table tbody tr td, th {
+  padding: 15px;
+  transition: width 2s;
+}
+
+table thead tr th {
+  background: var(--blue-grey-900);
+  color: var(--lime-400);
+}
+
+table tbody tr td {
+  background: var(--mercury);
+  color: var(--black);
+}
+
+/* TODO: HOVER STYLING TABLE */
+table tbody tr:hover {
+  cursor: pointer;
+}
+
+tbody tr:hover td {
+  background: var(--amber-400);
+}
+
+.attendance-info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.attendance-info div {
+  background: var(--blue-light-700);
+  color: white;
+  margin: 5px;
+  padding: 15px;
+  width: 50%;
+}
+
+.attendance-info h1 {
+  padding: 15px;
+}
+
+/* SMALL FIXES */
+ul>li>a, .dropdown>a {
+  color: var(--lime-400);
+}
+
+a i {
+  padding-right: 3px;
+}
+
+:link {
+  text-decoration: none;
+}
+
+.hero-text a {
+  color: var(--deep-orange-900);
+}
+
+.hero-text a:hover {
+  color: var(--red-400);
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 320px) {
+  .desktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 320px) and (max-width:480px) {
+  .filters section {
+    flex-direction: column;
+  }
+
+  table {
+    font-size: 12px;
+    width: 90%;
+  }
+
+  table tbody tr td, th {
+    padding: 12px;
+  }
+
+  .attendance-info {
+    flex-direction: column;
+  }
+
+  .attendance-info div {
+    margin: 4px;
+    padding: 10px;
+    font-size: 12px;
+    margin: 2em auto;
+    border-radius: 3px;
+    width: 90%;
+  }
+  .desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width:720px) {
+  .filters section {
+    flex-direction: column;
+  }
+
+  table {
+    font-size: 12px;
+    width: 90%;
+  }
+
+  table tbody tr td, th {
+    padding: 12px;
+  }
+
+  .attendance-info {
+    flex-direction: column;
+  }
+
+  .attendance-info div {
+    border-radius: 3px;
+    font-size: 14px;
+    margin: 2em auto;
+    padding: 12px;
+    width: 90%;
+  }
+  .desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .mobile {
+    display: none;
+  }
+}

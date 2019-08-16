@@ -1,0 +1,35 @@
+/* ICON HOVER */
+@keyframes pulseArrowMenu {
+  from {opacity: .5; transform: scale(.9);}
+  to {transform: scale(1.1); transform: translateY(5px);}
+}
+@keyframes pulseArrowHover {
+  from {}
+  to {transform: rotate(-90deg);}
+}
+@keyframes heroEntrance {}
+
+@keyframes trHover {
+  0%   {transform: translateX(1px);}
+  25%   {transform: translateX(3px);}
+  50%   {transform: translateX(5px); transform: scale(1.05);}
+  75%   {transform: translateX(7px);}
+  100% {transform: translateX(9px);}
+}
+@keyframes slideDown {
+  from {opacity: 0;}
+  50% {opacity: .5; transform: translateY(-10px)}
+  to {opacity: 1;}
+}
+table tbody tr:hover {
+  animation: trHover .5s cubic-bezier(0,1.93,.83,.67) forwards;
+}
+.pulse {
+  animation:  pulseArrowMenu 1.2s ease-in infinite;
+}
+a:hover .pulse {
+  animation:  pulseArrowHover .15s ease-in forwards;
+}
+.dropdown a:hover{
+  cursor: pointer;
+}
