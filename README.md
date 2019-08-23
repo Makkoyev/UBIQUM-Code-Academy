@@ -1,6 +1,3 @@
-"# UBIQUM-Code-Academy" 
-
-
 # Branch - Task 2
 https://github.com/Makkoyev/UBIQUM-Code-Academy/tree/task-2
 
